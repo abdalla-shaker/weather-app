@@ -26,7 +26,7 @@ const SideBar = ({ weatherList, isLoading, isDay }) => {
       >
         <Input textColors={textColors} />
       </div>
-      <h2 className={`mt-14 ${isActive ? "visible" : "invisible"} sm:visible`}>
+      <h2 className={`mt-14 ${isActive ? "visible" : "invisible"} sm:visible font-medium`}>
         The next 5 days forecast
       </h2>
       <ul
