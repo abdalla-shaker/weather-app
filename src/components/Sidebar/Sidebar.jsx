@@ -6,7 +6,7 @@ import { useState } from "react";
 const SideBar = ({ weatherList, isLoading, isDay }) => {
   const [isActive, setIsActive] = useState(false);
 
-  const textColors = isDay ? "text-gray-600" : "text-slate-200";
+  const textColors = isDay ? "sm:text-gray-600" : "sm:text-slate-200";
 
   const toggleActiveHandler = () => {
     setIsActive((prevState) => !prevState);
@@ -16,7 +16,7 @@ const SideBar = ({ weatherList, isLoading, isDay }) => {
     <aside
       className={`side-bar sm:h-full p-4 rounded-lg sm:bg-white/30 bg-white/80 ${
         isActive ? "active" : ""
-      } sm:w-96 transition-all absolute sm:static z-10 sm:${textColors}`}
+      } sm:w-96 transition-all absolute sm:static z-10 ${textColors}`}
     >
       <Burger clickHandler={toggleActiveHandler} />
       <div
