@@ -4,7 +4,7 @@ import windIconBlack from "../../assets/wind black.png";
 import windIconWhite from "../../assets/wind white.png";
 
 const WeatherDetails = ({ weather, cityName, counterName, isDay, isError }) => {
-  const textColors = isDay ? "text-gray-600" : "text-slate-200";
+  const textColors = isDay ? "text-gray-600" : "text-slate-100";
 
   if (isError) {
     return (
