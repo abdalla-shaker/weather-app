@@ -1,21 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { placeFetch } from "../../store/placeAction.js";
 import Suggestions from "../../utils/Suggestions.jsx";
 
 const Input = ({ textColors }) => {
-  const [userInput, setUserInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const placeInformation = useSelector((state) => state.search);
 
+  const userInput = useRef();
+
   const dispatch = useDispatch();
 
-  const onChangeHandler = (e) => {
-    setUserInput(e.target.value);
-  };
-
   const onListClick = (address) => {
-    setUserInput(() => address);
+    userInput.current.value = address;
     setIsTyping(false);
   };
 
@@ -28,7 +25,7 @@ const Input = ({ textColors }) => {
   };
 
   const clickHandler = () => {
-    dispatch(placeFetch(userInput));
+    dispatch(placeFetch(userInput.current.value));
   };
 
   return (
@@ -38,10 +35,9 @@ const Input = ({ textColors }) => {
         placeholder="Search"
         id="place"
         name="place"
-        onChange={onChangeHandler}
+        ref={userInput}
         onClick={inputClickHandler}
         onBlur={handleBlur}
-        value={userInput}
         required
         autoComplete="off"
         className={`py-2 px-4 border-2 border-transparent w-full rounded-full font-medium ${textColors} ${
