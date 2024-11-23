@@ -1,6 +1,6 @@
 const Burger = ({ clickHandler }) => {
   return (
-    <div className="fixed sm:hidden">
+    <div className="burger fixed sm:hidden">
       <button className="relative group" onClick={clickHandler}>
         <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
           <div className="flex flex-col pt-1 justify-between w-[20px] h-[20px] transform transition-all duration-100 origin-center overflow-hidden group-focus:rotate-90">

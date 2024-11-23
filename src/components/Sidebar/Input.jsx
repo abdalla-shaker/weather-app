@@ -41,7 +41,7 @@ const Input = ({ textColors }) => {
         required
         autoComplete="off"
         className={`py-2 px-4 border-2 border-transparent w-full rounded-full font-medium ${textColors} ${
-          textColors === "text-slate-200" ? "placeholder:text-slate-100" : ""
+          textColors === "sm:text-slate-200" ? "sm:placeholder:text-slate-100" : ""
         } bg-white/40 focus:border-slate-300 focus:border-opacity-40 outline-none transition-all`}
       />
 
