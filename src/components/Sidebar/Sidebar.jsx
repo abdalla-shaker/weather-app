@@ -14,8 +14,8 @@ const SideBar = ({ weatherList, isLoading, isDay }) => {
 
   return (
     <aside
-      className={`h-full p-4 rounded-lg bg-white/30 ${
-        isActive ? "w-96" : "w-0"
+      className={`side-bar sm:h-full p-4 rounded-lg bg-white/30 ${
+        isActive ? "active" : ""
       } sm:w-96 transition-all absolute sm:static z-10 ${textColors}`}
     >
       <Burger clickHandler={toggleActiveHandler} />

@@ -62,3 +62,11 @@
 .card-animation.active {
   transform: translateX(120%);
 }
+
+.side-bar {
+  left: -100%;
+}
+
+.side-bar.active {
+  left: 0;
+}
