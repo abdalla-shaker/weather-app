@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+  background-size: cover;
+  background-position: top;
+}
+
+.section.day.clear {
+  background-image: url("./assets/clear day.jpg");
+}
+
+.section.night.clear {
+  background-image: url("./assets/clear night.jpg");
+}
+
+.section.day.cloudy {
+  background-image: url("./assets/cloudy day.jpg");
+}
+
+.section.night.cloudy {
+  background-image: url("./assets/cloudy night.jpg");
+}
+
+.section.day.rainy {
+  background-image: url("./assets/rainy day.jpg");
+}
+
+.section.night.rainy {
+  background-image: url("./assets/rainy night.jpg");
+}
+
+.section.day.thunderstorm {
+  background-image: url("./assets/thunderstorm day.jpg");
+}
+
+.section.night.thunderstorm {
+  background-image: url("./assets/thunderstorm night.jpg");
+}
+
+.section.day.foggy {
+  background-image: url("./assets/foggy day.jpg");
+}
+
+.section.night.foggy {
+  background-image: url("./assets/foggy night.jpg");
+}
+
+.section.day.snowy {
+  background-image: url("./assets/snowy day.jpg");
+}
+
+.section.night.snowy {
+  background-image: url("./assets/snowy night.jpg");
+}
+
+.card-animation {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-animation.active {
+  transform: translateX(120%);
+}
